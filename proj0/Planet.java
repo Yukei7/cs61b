@@ -5,7 +5,7 @@ public class Planet {
     public double yyVel;
     public double mass;
     public String imgFileName;
-    private static double GRAVITY_CONSTANT = 6.67430e-11;
+    private static double GRAVITY_CONSTANT = 6.67e-11;
     public Planet(double xP, double yP, double xV,
                   double yV, double m, String img) {
         xxPos = xP;
