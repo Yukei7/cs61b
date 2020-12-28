@@ -53,11 +53,13 @@ public class NBody {
             }
             for (int j=0;j<ps.length;j++) {
                 ps[j].update(dt,xForces[j],yForces[j]);
-                StdDraw.picture(0, 0, imageField);
-                draw(ps);
-                StdDraw.show();
 //                StdDraw.pause(10);
             }
+            StdDraw.picture(0, 0, imageField);
+            for (Planet p:ps) {
+                p.draw();
+            }
+            StdDraw.show();
         }
 
         StdOut.printf("%d\n", ps.length);
