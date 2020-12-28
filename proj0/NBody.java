@@ -26,11 +26,6 @@ public class NBody {
         return ps;
     }
 
-    public static void draw (Planet[] ps) {
-        for (Planet p:ps) {
-            StdDraw.picture(p.xxPos, p.yyPos, "images/"+p.imgFileName);
-        }
-    }
 
     public static void main (String[] args) {
         double T = Double.valueOf(args[0]);
@@ -43,7 +38,9 @@ public class NBody {
         String imageField = "images/starfield.jpg";
         StdDraw.setScale(-uniRadius, uniRadius);
         StdDraw.picture(0, 0, imageField);
-        draw(ps);
+        for (Planet p:ps) {
+            p.draw();
+        }
         StdDraw.show();
 
         StdDraw.enableDoubleBuffering();
